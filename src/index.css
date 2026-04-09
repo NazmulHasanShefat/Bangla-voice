@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
-body{
+body {
   background-color: #111827;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.ai-input {
+  &:focus {
+    &::before {
+      content: "";
+      font-weight: bold;
+      color: #646464;
+    }
+  }
+  &::before {
+    content: "Type your message here...";
+    font-weight: bold;
+    cursor: text;
+    color: #646464;
+  }
 }
